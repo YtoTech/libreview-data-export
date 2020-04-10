@@ -19,7 +19,7 @@ def read_data_from_libreview_api(settings):
     # Get Glucose history.
     # https://api.libreview.io/glucoseHistory?numPeriods=5&period=14
     response = requests.get(
-        "{}/glucoseHistory?numPeriods=5&period=14".format(settings["api_endpoint"]),
+        "{}/glucoseHistory?numPeriods=5&period=7".format(settings["api_endpoint"]),
         headers={"Authorization": "Bearer {}".format(settings["api_token"])},
     )
     return response.json()
@@ -28,3 +28,9 @@ def read_data_from_libreview_api(settings):
 if __name__ == "__main__":
     data = read_data_from_libreview_api(loads_settings(DEFAULT_SETTINGS_FILE_PATH))
     pprint.pprint(data)
+
+
+# CSV export.
+# https://api-fr.libreview.io/export
+# {"captchaResponse":"XXX","type":"glucose"}
+# {"status":0,"data":{"url":"https://hub-fr.libreview.io/channel/XXX"},"ticket":{"token":"XXX","expires":1586543766}}
