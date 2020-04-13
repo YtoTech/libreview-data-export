@@ -34,3 +34,7 @@ if __name__ == "__main__":
 # https://api-fr.libreview.io/export
 # {"captchaResponse":"XXX","type":"glucose"}
 # {"status":0,"data":{"url":"https://hub-fr.libreview.io/channel/XXX"},"ticket":{"token":"XXX","expires":1586543766}}
+
+# Login
+# POST:https://api-fr.libreview.io/auth/login
+# {"email":"XXX","password":"XXX","fingerprint":"XXX"}
