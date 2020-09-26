@@ -28,6 +28,10 @@ def read_data_from_libreview_api(settings):
 if __name__ == "__main__":
     data = read_data_from_libreview_api(loads_settings(DEFAULT_SETTINGS_FILE_PATH))
     pprint.pprint(data)
+    output_json_file_path = "export-output.json"
+    with open(output_json_file_path, "w") as ef:
+        json.dump(data, ef)
+        print("Written LibreView data to {}".format(output_json_file_path))
 
 
 # CSV export.
