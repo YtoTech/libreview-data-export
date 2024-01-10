@@ -1,3 +1,7 @@
+**⚠️ This project is archived: I don't use it anymore, I'm sorry I can't help with requests. ⚠️**
+
+ ➡️ Please feel free to fork and take up the torch. Good luck!
+
 # LibreView data export
 
 Export device readings from [LibreView](https://www.libreview.com) API to a CSV file.
